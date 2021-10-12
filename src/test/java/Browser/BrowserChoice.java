@@ -16,6 +16,7 @@ public static void setDriver(DriverList list){
 
  public static void quitDriver(){
     if(driver!= null) {
+
         getDriver().quit();
     }
  }

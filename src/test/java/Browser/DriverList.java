@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public interface IBrowser {
+ interface IBrowser {
     public  WebDriver getBrowser();
 }
 
@@ -37,7 +37,7 @@ class DriverInstanceEge implements IBrowser{
     }
 }
 
-enum DriverList{
+public enum DriverList{
 
     DEFAULT_DRIVER(new DriverInstanceChrome()),
     CHROME_DRIVER(new DriverInstanceChrome()),
