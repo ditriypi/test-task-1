@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class DataGenerator {
-      int  randomNumb1 = (int) (Math.random()*1);
-     int randomNumb2 = (int) (Math.random()*10);
-    public  String getEmail() {
+    static   int  randomNumb1 = (int) (Math.random()*1);
+    static int randomNumb2 = (int) (Math.random()*10);
+    public static String getEmail() {
         ArrayList<String> domainEx = new ArrayList<>();
         Collections.addAll(domainEx,
                 "yandex.ru","mail.ru","gmail.com"
@@ -17,7 +17,7 @@ public class DataGenerator {
     }
 
 
-    private  String generateEmail(String domain, int length) {
+    private static String generateEmail(String domain, int length) {
         return RandomStringUtils.random(length, "abcdefghijklmnopqrstuvwxyz") + "@" + domain;
     }
 

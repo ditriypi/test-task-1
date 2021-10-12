@@ -42,7 +42,7 @@ public class RegistrationPage extends BasePage {
      }
 
      private   void  setConfirmPasswordInConfirmField(User user)  {
-             getConfirmPassword().sendKeys(user.getConfirmPassword());
+             getConfirmPassword().sendKeys(user.getConfirm());
      }
 
       //Business logic

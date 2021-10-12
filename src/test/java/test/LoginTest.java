@@ -18,8 +18,7 @@ public class LoginTest extends TestRunner {
 
     @DataProvider
     public Object[][]  getExistUser() {
-        UserRepository userRepository = new UserRepository();
-        return new Object[][]{{userRepository.getExistUser()}};
+        return new Object[][]{{UserRepository.getExistUser()}};
 
 
     }
@@ -43,8 +42,7 @@ public class LoginTest extends TestRunner {
 
       @DataProvider
     public Object[][]  getWrongUser() {
-          UserRepository userRepository = new UserRepository();
-        return new Object[][]{{userRepository.getWrongUser()}};
+        return new Object[][]{{UserRepository.getUserWithWrongPassword()}};
     }
 
     @Test(dataProvider = "getWrongUser")

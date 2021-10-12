@@ -13,8 +13,7 @@ import org.testng.annotations.Test;
 public class RegisterTest extends  TestRunner {
     @DataProvider
     public Object[][] createNewUser() {
-        UserRepository userRepository = new UserRepository();
-        return new Object[][]{{userRepository.createNewUser()}};
+        return new Object[][]{{UserRepository.getNewUser()}};
     }
 
     @Test(dataProvider ="createNewUser" )
@@ -32,8 +31,7 @@ public class RegisterTest extends  TestRunner {
     }
     @DataProvider
     public Object[][] createInvalidUser() {
-        UserRepository userRepository = new UserRepository();
-        return new Object[][]{{userRepository.createInvalidUser()}};
+        return new Object[][]{{UserRepository.getUserWithWrongPassword()}};
     }
     @Test(dataProvider ="createInvalidUser" )
     public void registeredWithWrongData(User create) {
